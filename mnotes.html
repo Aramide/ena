@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>notes</title>
+ <link rel="stylesheet" href="css/jquery.mobile-1.1.1.min.css" >
+<script type="text/javascript" charset="utf-8" src="lib/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="lib/js/jquery.mobile-1.1.1.min.js"></script>
+
+
+<style type="text/css">
+
+.ui-page { background: #C8B934;}
+
+.ui-content {
+       margin:auto;  
+       width: 80%;
+       background: url(images/note.jpg);
+    background-repeat:repeat-y;
+    background-position:center center;
+    background-attachment:scroll;
+    background-size:100% 100%;      
+}  
+
+#scribble {
+     white-space: pre-wrap;       /* css-3 */
+      white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+      white-space: -pre-wrap;      /* Opera 4-6 */
+      white-space: -o-pre-wrap;    /* Opera 7 */
+      word-wrap: break-word;       /* Internet Explorer 5.5+ */
+      margin:auto;
+      max-width: 95%;
+      padding: 1% 1% 1% 1%;
+      color: #C8B934;
+      font-family:  Arial,sans-serif;
+      font-size: 100%;
+      font-style: italic; 
+      font-weight:bold; 
+      line-height: 1.5em;  
+}
+
+.c-link {
+     align:right;
+      color: #486891;
+      font-family:  Arial,sans-serif;
+      font-size: 95%;
+      font-weight:bold; 
+      text-decoration: none;         
+}
+</style>
+
+
+
+<script type="text/javascript">
+function storeUserScribble(id) {
+  var scribble = document.getElementById('scribble').innerHTML;
+  localStorage.setItem('userScribble',scribble);
+}
+
+function getUserScribble() {
+  if ( localStorage.getItem('userScribble')) {
+    var scribble = localStorage.getItem('userScribble');
+  }
+  else {
+    var scribble = 'You can write your notes directly on this sticky... your notes do not get wiped away until you do so';
+  }
+  document.getElementById('scribble').innerHTML = scribble;
+}
+
+function clearLocal() {
+  clear: localStorage.clear(); 
+  return false;
+}
+</script>
+
+</head>
+ <body class="ui-mobile-viewport ui-overlay-c">
+ <div data-role="page">
+ <a data-role="button" data-transition="fade" data-prefetch="true" data-ajax="false" href="index.html" data-theme="e">
+                  RETURN HOME
+                </a>
+
+ 
+ <br>
+ 
+ <div data-role="content" data-theme="e" data-content-theme="d" ><br>
+ 
+
+
+<pre id="scribble" contenteditable="true" onkeyup="storeUserScribble(this.id);"></pre>
+
+
+<script>
+  getUserScribble();
+</script>
+
+</div></div>
+
+
+</body>
+</html>
