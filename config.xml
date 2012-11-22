@@ -34,12 +34,12 @@ xmlns="http://www.w3.org/ns/widgets">
 <icon src="icons/webos/icon.png" gap:platform="webos"/> 
 <icon src="icons/webos/icon.png" gap:platform="webos"/>
 
-<gap:splash src="images/reception.png"         gap:platform="blackberry" />
-<gap:splash src="images/reception.png"    gap:platform="ios"     width="320" height="480" />
-<gap:splash src="images/reception.png" gap:platform="ios"     width="640" height="960" />
-<gap:splash src="images/reception.png"      gap:platform="ios"     width="768" height="1024" />
-<gap:splash src="images/reception.png"     gap:platform="ios"     width="1024" height="768" />
-<gap:splash src="images/reception.png" gap:platform="winphone" />
+<gap:splash src="images/Reception.jpg"         gap:platform="blackberry" />
+<gap:splash src="images/Reception.jpg"    gap:platform="ios"     width="320" height="480" />
+<gap:splash src="images/Reception.jpg" gap:platform="ios"     width="640" height="960" />
+<gap:splash src="images/Reception.jpg"      gap:platform="ios"     width="768" height="1024" />
+<gap:splash src="images/Reception.jpg"     gap:platform="ios"     width="1024" height="768" />
+<gap:splash src="images/Reception.jpg" gap:platform="winphone" />
 
 
  
